@@ -1,5 +1,3 @@
-import styles from "@/module/RadioList.module.css";
-
 function RadioList({ profileData, setProfileData }) {
   const { category } = profileData;
 
@@ -9,10 +7,10 @@ function RadioList({ profileData, setProfileData }) {
   };
 
   return (
-    <div className={styles.container}>
-      <p>دسته بندی</p>
-      <div className={styles.main}>
-        <div>
+    <div className="mb-10">
+      <p className="text-lg mb-1">دسته بندی</p>
+      <div className="flex">
+        <div className="flex items-center justify-between bg-[#304ffe18] text-[#304ffe] ml-8 w-16 py-1 px-1.5 rounded-md cursor-pointer">
           <label htmlFor="villa">ویلا</label>
           <input
             type="radio"
@@ -23,7 +21,7 @@ function RadioList({ profileData, setProfileData }) {
             onChange={changeHandler}
           />
         </div>
-        <div>
+        <div className="flex items-center justify-between bg-[#304ffe18] text-[#304ffe] ml-8 w-16 py-1 px-1.5 rounded-md cursor-pointer">
           <label htmlFor="apartment">آپارتمان</label>
           <input
             type="radio"
@@ -34,7 +32,7 @@ function RadioList({ profileData, setProfileData }) {
             onChange={changeHandler}
           />
         </div>
-        <div>
+        <div className="flex items-center justify-between bg-[#304ffe18] text-[#304ffe] ml-8 w-16 py-1 px-1.5 rounded-md cursor-pointer">
           <label htmlFor="store">مغازه</label>
           <input
             type="radio"
@@ -45,7 +43,7 @@ function RadioList({ profileData, setProfileData }) {
             onChange={changeHandler}
           />
         </div>
-        <div>
+        <div className="flex items-center justify-between bg-[#304ffe18] text-[#304ffe] ml-8 w-16 py-1 px-1.5 rounded-md cursor-pointer">
           <label htmlFor="office">دفتر</label>
           <input
             type="radio"

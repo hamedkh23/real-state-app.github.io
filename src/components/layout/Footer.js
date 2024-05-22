@@ -1,10 +1,10 @@
-import styles from "@/layout/Footer.module.css";
-
 function Footer() {
   return (
-    <footer className={styles.footer}>
-      <div className={styles.desc}>
-        <h3>سامانه خرید و اجاره ملک</h3>
+    <footer className="flex justify-between p-5 mt-20 mx-0 mb-5 rounded-xl bg-[#304ffe] text-white">
+      <div className="w-9/12 text-justify ml-8">
+        <h3 className="font-semibold text-2xl mb-2.5">
+          سامانه خرید و اجاره ملک
+        </h3>
         <p>
           لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
           استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در

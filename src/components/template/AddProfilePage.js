@@ -5,7 +5,6 @@ import Loader from "@/module/Loader";
 import RadioList from "@/module/RadioList";
 import TextInput from "@/module/TextInput";
 import TextList from "@/module/TextList";
-import styles from "@/template/AddProfilePage.module.css";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
@@ -67,8 +66,10 @@ function AddProfilePage({ data }) {
   };
 
   return (
-    <div className={styles.container}>
-      <h3>{data ? "ویرایش آگهی" : "ثبت آگهی"}</h3>
+    <div className="flex flex-col mb-[150px]">
+      <h3 className="text-2xl font-normal mb-20 w-full bg-[#304ffe18] text-[#304ffe] rounded-sm py-2.5 px-4">
+        {data ? "ویرایش آگهی" : "ثبت آگهی"}
+      </h3>
       <TextInput
         title="عنوان آگهی"
         name="title"
@@ -127,11 +128,17 @@ function AddProfilePage({ data }) {
       {loading ? (
         <Loader />
       ) : data ? (
-        <button className={styles.submit} onClick={editHandler}>
+        <button
+          className="border-none bg-[#304ffe] text-white text-base rounded-md transition-all ease-in delay-100 cursor-pointer p-2.5 hover:scale-105"
+          onClick={editHandler}
+        >
           ویرایش آگهی
         </button>
       ) : (
-        <button className={styles.submit} onClick={submitHandler}>
+        <button
+          className="border-none bg-[#304ffe] text-white text-base rounded-md transition-all ease-in delay-100 cursor-pointer p-2.5 hover:scale-105"
+          onClick={submitHandler}
+        >
           ثبت آگهی
         </button>
       )}

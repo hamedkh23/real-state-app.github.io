@@ -1,12 +1,12 @@
-import styles from "@/module/ItemList.module.css";
-
 function ItemList({ data }) {
   return (
-    <div className={styles.container}>
+    <div>
       {data.length ? (
-        <ul>
+        <ul className="pr-5 mb-12">
           {data.map((amenity, index) => (
-            <li key={index}>{amenity}</li>
+            <li className="marker:text-[#304ffe]" key={index}>
+              {amenity}
+            </li>
           ))}
         </ul>
       ) : (

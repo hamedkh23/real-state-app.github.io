@@ -1,18 +1,20 @@
 import Link from "next/link";
 import { HiFilter } from "react-icons/hi";
 import { categories } from "@/constants/strings";
-import styles from "@/module/Sidebar.module.css";
 
 function Sidebar() {
   return (
-    <div className={styles.container}>
-      <p>
-        <HiFilter />
+    <div className="flex flex-col">
+      <p className="flex text-xl font-normal">
+        <HiFilter className="ml-2.5 text-2xl text-[#304ffe]" />
         دسته بندی
       </p>
-      <Link href="/buy-residential">همه</Link>
+      <Link className="text-[#808080] m-1" href="/buy-residential">
+        همه
+      </Link>
       {Object.keys(categories).map((i) => (
         <Link
+          className="text-[#808080] m-1"
           key={i}
           href={{
             pathname: "/buy-residential",

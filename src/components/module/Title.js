@@ -1,7 +1,9 @@
-import styles from "@/module/Title.module.css";
-
 function Title({ children }) {
-  return <h3 className={styles.title}>{children}</h3>;
+  return (
+    <h3 className="text-[#304ffe] text-lg font-normal border-b-2 border-solid border-[#c0c0c0] mb-5 pb-2.5">
+      {children}
+    </h3>
+  );
 }
 
 export default Title;
